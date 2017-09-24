@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html lang="en"
+ xmlns="http://www.w3.org/1999/xhtml"
+ 
+ xmlns:h="http://xmlns.jcp.org/jsf/html"
+ xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
+ <!-- xmlns:h="http://java.sun.com/jsf/html"  -->
+ <h:head>
+ <title> Register form </title>
+ </h:head>
+ 
+<h:body>
+ <h2>Register
+ <h:commandButton value="Sign In" action="Login"/>
+ </h2>
+ 
+ <h:form id="Register">
+ 
+ All fields are required!
+ 	
+ 	<br> </br>
+ 	<div>
+ 		First Name <h:inputText id="Firstname" value="#{RegisterBean.firstName}" a:placeholder="First name" />				
+	</div>
+	<div>
+		Last Name <h:inputText id="Lastname" value="#{RegisterBean.lastname}" a:placeholder="Last name" />
+				
+ 	</div>
+	<div>
+		Address <h:inputText id="Address" value="#{RegisterBean.address}" a:placeholder="P.O.Box 123" />
+ 					
+	</div>
+	<div>
+		Phone Number 
+		<h:inputText id="Phonenumber" value="#{RegisterBean.phoneNumber}" a:placeholder="9999999999" />
+ 		 			
+	</div>
+	<div>
+		Personal Email 
+		<h:inputText id="Personalemail" value="#{RegisterBean.personalEmail}" a:placeholder="Email Address" />			
+	</div>
+	<div>
+		Username 
+		<h:inputText id="Username" value="#{RegisterBean.username}" a:placeholder="Username" />
+		
+ 		
+	</div>
+	<div>
+ 		Password 
+ 		<h:inputText id="Password" value="#{RegisterBean.password}" a:placeholder="Password" />			
+	</div>
+		<br> </br>
+	<div>
+	<h:commandButton value="Register" action="#{RegisterBean.createResigerForm}"/>
+ 	</div>
+ 	
+	</h:form>
+ </h:body>
+ </html> 
+ 
