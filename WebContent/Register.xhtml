@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en"
  xmlns="http://www.w3.org/1999/xhtml"
- 
+ xmlns:f="http://java.sun.com/jsf/core"
  xmlns:h="http://xmlns.jcp.org/jsf/html"
  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
  <!-- xmlns:h="http://java.sun.com/jsf/html"  -->
@@ -20,34 +20,47 @@
  	
  	<br> </br>
  	<div>
- 		First Name <h:inputText id="Firstname" value="#{RegisterBean.firstName}" a:placeholder="First name" />				
+ 		First Name <h:inputText id="Firstname" value="#{RegisterBean.firstName}" a:placeholder="First name"
+ 		required="true" requiredMessage="Invalid First name"  />
+ 		<h:message for="Firstname" style="color:Red"></h:message>				
 	</div>
 	<div>
-		Last Name <h:inputText id="Lastname" value="#{RegisterBean.lastname}" a:placeholder="Last name" />
+		Last Name <h:inputText id="Lastname" value="#{RegisterBean.lastname}" a:placeholder="Last name" 
+		required="true" requiredMessage="Invalid Lastname" />
+		<h:message for="Lastname" style="color:Red"></h:message>
 				
  	</div>
 	<div>
-		Address <h:inputText id="Address" value="#{RegisterBean.address}" a:placeholder="P.O.Box 123" />
+		Address <h:inputText id="Address" value="#{RegisterBean.address}" a:placeholder="P.O.Box 123"
+		required="true" requiredMessage="Invalid Address"  />
+		<h:message for="Address" style="color:Red"></h:message>
  					
 	</div>
 	<div>
 		Phone Number 
-		<h:inputText id="Phonenumber" value="#{RegisterBean.phoneNumber}" a:placeholder="9999999999" />
- 		 			
+		<h:inputText id="Phonenumber" value="#{RegisterBean.phoneNumber}" a:placeholder="9999999999" 
+		required="true" requiredMessage="Invalid Phonenumber" />
+		<h:message for="Phonenumber" style="color:Red"></h:message>
 	</div>
 	<div>
 		Personal Email 
-		<h:inputText id="Personalemail" value="#{RegisterBean.personalEmail}" a:placeholder="Email Address" />			
+		<h:inputText id="Personalemail" value="#{RegisterBean.personalEmail}" a:placeholder="Email Address" 
+		required="true" requiredMessage="Invalid Personalemail" />	
+		<h:message for="Personalemail" style="color:Red"></h:message>		
 	</div>
 	<div>
 		Username 
-		<h:inputText id="Username" value="#{RegisterBean.username}" a:placeholder="Username" />
+		<h:inputText id="Username" value="#{RegisterBean.username}" a:placeholder="Username" 
+		required="true" requiredMessage="Invalid Username" />
+		<h:message for="Username" style="color:Red"></h:message>
 		
  		
 	</div>
 	<div>
  		Password 
- 		<h:inputText id="Password" value="#{RegisterBean.password}" a:placeholder="Password" />			
+ 		<h:inputSecret id="Password" value="#{RegisterBean.password}" a:placeholder="Password" 
+ 		required="true" requiredMessage="Invalid Password" />	
+ 		<h:message for="Password" style="color:Red"></h:message>		
 	</div>
 		<br> </br>
 	<div>

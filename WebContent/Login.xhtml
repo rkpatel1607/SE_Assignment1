@@ -5,41 +5,70 @@
  xmlns:h="http://xmlns.jcp.org/jsf/html"
  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
  <h:head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  
+  <!-- Bootstrap core CSS-->
+  <link href="resources/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- Custom fonts for this template-->
+  <link href="resources/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <!-- Custom styles for this template-->
+  <link href="2.css" rel="stylesheet" />
+ 
  <title> Login form </title>
  </h:head>
  
- <h:body>
- <h2> Sign In</h2>
- 	<h:form>
- 		<div>
- 		
- 			<h:inputText id="Username" value="#{loginBean.username}" a:placeholder="Username"
+<h:body class="bg-dark">
+ 
+<div class="container" >
+    <div class="card card-login mx-auto mt-5" >
+      <div class="card-header" >Sign In</div>
+      <div class="card-body" >
+        <h:form>
+          <div class="form-group" >
+            <label for="exampleInputEmail1" >Email address</label>
+            <h:inputText class="form-control" id="Username" value="#{loginBean.username}" a:placeholder="Username"
  			required="true" requiredMessage="Invalid Username" />
- 			
- 			
- 			</div>
- 			
- 		<div>
- 			<h:inputSecret id="Password" value="#{loginBean.password}" a:placeholder="Password" 
+ 			<h:message for="Username" style="color:Red"></h:message>
+          </div>
+          <div class="form-group" >
+            <label for="exampleInputPassword1" >Password</label>
+            <h:inputSecret class="form-control" id="Password" value="#{loginBean.password}" a:placeholder="Password" 
  			required="true" requiredMessage="Invalid Password"/>
- 			
- 		</div>
- 		<h:message for="Username" style="color:Red"></h:message>
- 		<br></br>
- 		<h:message for="Password" style="color:Red"></h:message>
- 		<div>
- 			<h:commandButton value="Login" action="#{loginBean.createSignINForm}"/>	
- 		</div>
- 		
- 		<div>
- 		Don't have an Account!
- 		<h:commandButton value="Register Here" action="Register"/>
- 		
- 		
- 		</div>
- 	</h:form>
+ 			<h:message for="Password" style="color:Red"></h:message>
+          </div>
+          <div class="form-group" >
+            <div class="form-check" >
+              <label class="form-check-label" >
+                <input class="form-check-input" type="checkbox" /> Remember Password</label>
+            </div>
+          </div>
+          <h:commandButton class="btn btn-primary btn-block" value="Login" action="#{loginBean.createSignINForm}"/>
+ 		<hr />
+		 		
+	 		<div>
+	 		
+	 		</div>
+        </h:form>
+        <div class="text-center">
+          Don't have an Account! <a  action="Register.xhtml" > Register Here</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Bootstrap core JavaScript-->
+  <script src="resources/js/jquery.min.js"></script>
+  <script src="resources/js/bootstrap.min.js"></script>
+  <!-- Core plugin JavaScript-->
+
+
  
   </h:body>
+  
   </html>
   
  
