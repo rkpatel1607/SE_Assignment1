@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="en"
  xmlns="http://www.w3.org/1999/xhtml"
-
+ xmlns:f="http://java.sun.com/jsf/core"
  xmlns:h="http://xmlns.jcp.org/jsf/html"
  xmlns:a="http://xmlns.jcp.org/jsf/passthrough">
  <h:head>
@@ -13,16 +13,20 @@
  	<h:form>
  		<div>
  		
- 			<h:inputText id="Username" value="#{loginBean.username}" a:placeholder="Username" />
+ 			<h:inputText id="Username" value="#{loginBean.username}" a:placeholder="Username"
+ 			required="true" requiredMessage="Invalid Username" />
  			
  			
  			</div>
  			
  		<div>
- 			<h:inputText id="Password" value="#{loginBean.password}" a:placeholder="Password" />
+ 			<h:inputSecret id="Password" value="#{loginBean.password}" a:placeholder="Password" 
+ 			required="true" requiredMessage="Invalid Password"/>
  			
  		</div>
- 		
+ 		<h:message for="Username" style="color:Red"></h:message>
+ 		<br></br>
+ 		<h:message for="Password" style="color:Red"></h:message>
  		<div>
  			<h:commandButton value="Login" action="#{loginBean.createSignINForm}"/>	
  		</div>
